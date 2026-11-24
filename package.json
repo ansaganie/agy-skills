@@ -1,0 +1,18 @@
+{
+  "name": "agy-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Antigravity-native plugin ports of popular open-source agent skill packs.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ansaganie/agy-skills"
+  },
+  "license": "MIT",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "validate:agy": "node scripts/validate-agy.mjs",
+    "check-upstream": "node scripts/check-upstream.mjs",
+    "check": "npm run validate && npm run validate:agy"
+  }
+}
