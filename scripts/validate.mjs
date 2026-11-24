@@ -242,8 +242,12 @@ function validatePlugin(packName, pluginDir) {
       }
     }
 
-    // Cross-platform script parity: every .sh template/script must have a matching .ps1 file
+    // Cross-platform script parity: every .sh template/script must use LF and have a matching .ps1 file
     for (const shFile of shFiles) {
+      const shRaw = fs.readFileSync(shFile, "utf8");
+      if (shRaw.includes("\r\n") || shRaw.includes("\r")) {
+        fail(shFile, "Shell script uses CRLF/CR line endings (must use LF for Linux/macOS bash)");
+      }
       const ps1File = shFile.replace(/\.sh$/, ".ps1");
       if (!fs.existsSync(ps1File)) {
         fail(shFile, `Missing Windows PowerShell counterpart: ${path.basename(ps1File)}`);
