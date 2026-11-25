@@ -1,8 +1,10 @@
 # Matt Pocock Skills for Antigravity
 
-An Antigravity-native plugin port of [Matt Pocock's Skills For Real Engineers](https://github.com/mattpocock/skills) (`v1.3.2`, MIT licensed).
+An unofficial, migrated Antigravity plugin port of [Matt Pocock's Skills For Real Engineers](https://github.com/mattpocock/skills) (`v1.3.2`, MIT licensed).
 
-All 27 promoted skills (`engineering` and `productivity`) are preserved with Matt Pocock's original workflow design and skill names, adapted for 100% compatibility with Google Antigravity across macOS, Linux, and Windows.
+> [!NOTE]
+> **Migrated skill pack — no original skills or workflow forks.**
+> All 27 promoted skills (`engineering` and `productivity`) are ported directly from [mattpocock/skills](https://github.com/mattpocock/skills) with Matt Pocock's original workflow design and skill names intact. The only changes applied are technical adaptations for **100% compatibility with the Antigravity (`agy`) API** across macOS, Linux, and Windows.
 
 ## Install
 
@@ -12,7 +14,9 @@ agy plugin install https://github.com/ansaganie/agy-skills/tree/main/plugins/mat
 
 Then run `/setup-matt-pocock-skills` once in each repository where you plan to use the engineering skills.
 
-## What Was Adapted for Antigravity
+## What Was Adapted for the Antigravity (`agy`) API
+
+Only `agy` API compatibility adaptations were applied on top of upstream:
 
 - **Plugin layout**: Flattened the 27 promoted skills into `skills/<name>/SKILL.md` with a Marketplace-ready `plugin.json` (`agy plugin validate --strict` clean).
 - **Invocation model**: Preserved `disable-model-invocation: true` on all 17 user-invoked skills and removed Codex-only `agents/openai.yaml`.
@@ -61,6 +65,7 @@ Then run `/setup-matt-pocock-skills` once in each repository where you plan to u
 - **`grilling`**: The reusable design-tree interview primitive behind `grill-me`, `grill-with-docs`, `triage`, `wayfinder`, and `improve-codebase-architecture`.
 - **`writing-for-agents`**: Reference for authoring skills, `AGENTS.md` / `GEMINI.md`, and pointer docs.
 
-## Attribution & License
+## Attribution, Issues & License
 
-Original skills by **Matt Pocock** ([mattpocock/skills](https://github.com/mattpocock/skills), [AI Hero](https://www.aihero.dev)), licensed under the [MIT License](./LICENSE).
+- **Original author**: All skills are authored by **Matt Pocock** ([mattpocock/skills](https://github.com/mattpocock/skills), [AI Hero](https://www.aihero.dev)) and redistributed under the [MIT License](./LICENSE). This is an unofficial community port and is not affiliated with or endorsed by Matt Pocock, AI Hero, or Google/Antigravity.
+- **Where to report issues**: Report workflow, prompt, or skill-design feedback upstream at [mattpocock/skills](https://github.com/mattpocock/skills/issues). Report Antigravity (`agy`) API compatibility or migration bugs in [ansaganie/agy-skills](https://github.com/ansaganie/agy-skills/issues).

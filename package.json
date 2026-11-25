@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Antigravity-native plugin ports of popular open-source agent skill packs.",
+  "description": "Migrated open-source agent skill packs, adapted strictly for 100% compatibility with the Antigravity (agy) API.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ansaganie/agy-skills"

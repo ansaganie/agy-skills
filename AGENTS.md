@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repository maintains Antigravity-native plugin ports of popular open-source agent skill packs.
+This repository maintains **migrated-only**, Antigravity-native plugin ports of popular open-source agent skill packs, adapted strictly for **100% compatibility with the Antigravity (`agy`) API**. No original skills are authored here, and no behavioral or workflow forks are introduced beyond technical `agy` API compatibility.
 
 ## Repository Layout
 
@@ -14,8 +14,8 @@ This repository maintains Antigravity-native plugin ports of popular open-source
 
 Every plugin under `plugins/<pack>/` must satisfy these rules:
 
-1. **Verified open-source license**: Only port packs whose upstream license explicitly permits public redistribution. Preserve upstream attribution in `README.md` and `plugin.json`, and include the upstream `LICENSE`.
-2. **Upstream UX and naming fidelity**: Keep original workflow UX (e.g., plain-chat grilling rounds) and original skill names. Adapt only what is needed for 100% Antigravity technical compatibility.
+1. **Migrated-only scope & verified open-source license**: Only port existing open-source packs whose upstream license explicitly permits public redistribution. Do not author original skills or alter upstream workflows beyond `agy` API compatibility. Preserve upstream attribution in `README.md` and `plugin.json`, include the upstream `LICENSE`, and include a clear migrated-port / non-affiliation / `agy` API compatibility notice (plus upstream vs. port issue routing) in each plugin's `README.md`.
+2. **Upstream UX and naming fidelity**: Keep original workflow UX (e.g., plain-chat grilling rounds) and original skill names. Adapt only what is needed for 100% Antigravity (`agy`) API technical compatibility.
 3. **Location-independent skill activation**: Never hardcode `~/.gemini/config/skills/...` or Claude's `Skill tool`. Instruct the agent to activate another skill by reading its `SKILL.md` from the Available Skills list (or sibling `../<skill-name>/SKILL.md`) with `read_file`.
 4. **Antigravity tool & rule conventions**:
    - Keep `disable-model-invocation: true` for user-invoked skills; strip harness-only metadata like `agents/openai.yaml`.

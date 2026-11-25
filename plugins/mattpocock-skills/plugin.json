@@ -3,7 +3,7 @@
   "name": "mattpocock-skills",
   "displayName": "Matt Pocock Skills",
   "version": "1.3.2",
-  "description": "Matt Pocock's engineering and productivity skills for Antigravity: grilling, spec-to-tickets, TDD, two-axis code review, and domain modeling.",
+  "description": "Unofficial migrated port of Matt Pocock's engineering and productivity skills, adapted strictly for 100% Antigravity (agy) API compatibility.",
   "logo": "assets/logo.svg",
   "suggestedPrompts": [
     "Run /setup-matt-pocock-skills to configure this repo for Matt Pocock's engineering skills",
